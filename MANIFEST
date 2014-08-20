@@ -11,6 +11,7 @@ lib/Games/Bingo/Constants.pm
 LICENSE
 Makefile.PL
 MANIFEST			This list of files
+META.json
 META.yml
 notes/coverage_report_0.14.txt
 notes/coverage_report_0.15.txt
@@ -35,6 +36,7 @@ t/card_populate.t
 t/card_print_card.t
 t/card_resolve_column.t
 t/card_validate.t
+t/changes.t
 t/collection_add_column.t
 t/collection_count_columns.t
 t/collection_divide.t
@@ -50,6 +52,7 @@ t/column_new.t
 t/column_populate.t
 t/column_reverse.t
 t/inheritance.t
+t/kwalitee.t
 t/MyBingo.pm
 t/pod-coverage.t
 t/pod.t

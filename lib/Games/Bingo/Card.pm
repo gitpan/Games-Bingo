@@ -1,8 +1,8 @@
 package Games::Bingo::Card;
 
-# $Id: Card.pm 1869 2007-08-12 15:52:36Z jonasbn $
-
 use strict;
+use warnings;
+use 5.006; #perl 5.6.0
 use integer;
 use vars qw($VERSION);
 use Games::Bingo::Column;
@@ -15,7 +15,7 @@ use Games::Bingo::Constants qw(
 	NUMBER_OF_NUMBERS
 );
 
-$VERSION = '0.04';
+$VERSION = '0.16';
 
 sub new {
 	my ($class) = @_;

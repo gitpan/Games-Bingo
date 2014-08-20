@@ -1,8 +1,7 @@
 package Games::Bingo::ColumnCollection;
 
-# $Id: ColumnCollection.pm 1869 2007-08-12 15:52:36Z jonasbn $
-
 use strict;
+use warnings;
 use integer;
 use Games::Bingo;
 use Games::Bingo::Column;
@@ -10,7 +9,7 @@ use vars qw(@ISA $VERSION);
 use Carp;
 
 @ISA = qw(Games::Bingo);
-$VERSION = '0.03';
+$VERSION = '0.16';
 
 sub new {
 	my $class = shift;

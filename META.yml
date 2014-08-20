@@ -1,42 +1,31 @@
 ---
-name: Games-Bingo
-version: 0.15
+abstract: 'a bingo game Perl implementation'
 author:
   - 'Jonas B. Nielsen, <jonasbn@cpan.org>'
-abstract: a bingo game Perl implementation
+build_requires: {}
+configure_requires:
+  Module::Build: '0.42'
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4205, CPAN::Meta::Converter version 2.142060'
 license: perl
-resources:
-  license: http://dev.perl.org/licenses/
-requires:
-  Carp: 0
-  Data::Dumper: 0
-  POSIX: 0
-  Test::Harness: 0
-  Test::More: 0
-  Test::Pod: 0.95
-  UNIVERSAL: 0
-provides:
-  Games::Bingo:
-    file: lib/Games/Bingo.pm
-    version: 0.15
-  Games::Bingo::Card:
-    file: lib/Games/Bingo/Card.pm
-    version: 0.04
-  Games::Bingo::Column:
-    file: lib/Games/Bingo/Column.pm
-    version: 0.03
-  Games::Bingo::ColumnCollection:
-    file: lib/Games/Bingo/ColumnCollection.pm
-    version: 0.03
-  Games::Bingo::Constants:
-    file: lib/Games/Bingo/Constants.pm
-    version: 0.01
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: Games-Bingo
 no_index:
   directory:
     - t
   file:
     - t/MyBingo.pm
-generated_by: Module::Build version 0.2806
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+requires:
+  Carp: '0'
+  Data::Dumper: '0'
+  POSIX: '0'
+  Test::Harness: '0'
+  Test::More: '0'
+  Test::Pod: '0.95'
+  UNIVERSAL: '0'
+  perl: v5.6.0
+resources:
+  license: http://dev.perl.org/licenses/
+version: '0.16'

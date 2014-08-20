@@ -1,0 +1,50 @@
+{
+   "abstract" : "a bingo game Perl implementation",
+   "author" : [
+      "Jonas B. Nielsen, <jonasbn@cpan.org>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4205",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Games-Bingo",
+   "no_index" : {
+      "directory" : [
+         "t"
+      ],
+      "file" : [
+         "t/MyBingo.pm"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.42"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Data::Dumper" : "0",
+            "POSIX" : "0",
+            "Test::Harness" : "0",
+            "Test::More" : "0",
+            "Test::Pod" : "0.95",
+            "UNIVERSAL" : "0",
+            "perl" : "v5.6.0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.16"
+}

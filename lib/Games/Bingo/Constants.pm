@@ -1,13 +1,12 @@
 package Games::Bingo::Constants;
 
-# $Id: Constants.pm 1639 2006-12-17 08:23:18Z jonasbn $
-
 use strict;
+use warnings;
 require Exporter;
 
 use vars qw($VERSION @ISA @EXPORT_OK);
 
-$VERSION = '0.01';
+$VERSION = '0.16';
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(
 	NUMBER_OF_NUMBERS

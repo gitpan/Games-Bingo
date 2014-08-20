@@ -1,8 +1,7 @@
 #!/usr/bin/perl -w
 
-# $Id: bingo.pl 1639 2006-12-17 08:23:18Z jonasbn $
-
 use strict;
+use warnings;
 use Games::Bingo;
 
 my $version = "0.02";

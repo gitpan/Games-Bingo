@@ -1,14 +1,13 @@
 package Games::Bingo;
 
-# $Id: Bingo.pm 1869 2007-08-12 15:52:36Z jonasbn $
-
 use strict;
+use warnings;
 use integer;
 use POSIX qw(floor);
 use vars qw($VERSION);
 use Games::Bingo::Constants qw(NUMBER_OF_NUMBERS);
 
-$VERSION = '0.15';
+$VERSION = '0.16';
 
 sub new {
 	my $class = shift;

@@ -1,18 +1,29 @@
 CHANGES file for Games::Bingo
 
-$Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
+0.16 2014.08.20, maintenance release, update not required
 
-0.15 Released 12th. of August 2007 (Update not necessary)
+- Added t/kwalitee.t Test::Kwalitee test
 
-- Refactored constructor for Games::Bingo::ColumnCollection so ref of class was
+- Added Perl version requirement (5.6.0)
+
+- Added use of warnings
+
+- Added t/changes.t, Test::CPAN::Changes test
+
+- Aligned versions of all modules included in distribution
+
+
+0.15 2007.08.12 (Update not necessary)
+
+- Refactored constructor for Games::Bingo::ColumnCollection so ref of
+  class was removed. Updated version to 0.03
+
+- Refactored constructor for Games::Bingo::Column so ref of class was
   removed. Updated version to 0.03
 
-- Refactored constructor for Games::Bingo::Column so ref of class was removed.
-  Updated version to 0.03
-  
-- Refactored constructor for Games::Bingo::Card so ref of class was removed.
-  Updated version to 0.04
-  
+- Refactored constructor for Games::Bingo::Card so ref of class was
+  removed. Updated version to 0.04
+
 - Refactored out some code in Games::Bingo::Card, which was commented as
   unimplemented, I cannot remember what and why so it goes
 
@@ -24,16 +35,16 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 
 - Refactored out check for parameter, which would always be set
 
-- Fixed a problem in Build.PL scripts directory no longers existing, 
-  bingo.pl is located in bin, this should address the high magnitude 
+- Fixed a problem in Build.PL scripts directory no longers existing,
+  bingo.pl is located in bin, this should address the high magnitude
   of failing tests
 
 
-0.14 Released 8th. of August 2007 (Update not necessary)
+0.14 2007.08.08 (Update not necessary)
 
 - NB! a minor API change, the splitnumber method has moved from
   Games::Bingo::Card to Games::Bingo
-  
+
 - Updated Build.PL to more contemporary version
 
 - Updated MANIFEST.SKIP to more contemporary version
@@ -44,27 +55,27 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 
 - Cleaned some more of the tests
 
-- Added scripts statement to Build.PL, to avoid problems with auto generated
-  Makefile.PL, when this is enabled in Build.PL
+- Added scripts statement to Build.PL, to avoid problems with auto
+  generated Makefile.PL, when this is enabled in Build.PL
 
-- Due to problems with coverage testing, module coverage showing up as n/a for
-  some of the core classes I decided to clean up the code a bit. Coverage now
-  works and the problem seemed to be circular usage of modules, more details
-  on the cleaning below
-  
+- Due to problems with coverage testing, module coverage showing up as
+  n/a for some of the core classes I decided to clean up the code a bit.
+  Coverage now works and the problem seemed to be circular usage of
+  modules, more details on the cleaning below
+
 - I have refactored Games::Bingo so it no longer inherits from
   Games::Bingo::Card
-  
+
 - Method splitnumber has moved from Games::Bingo::Card to Games::Bingo
   test t/card_splitnumber.t removed and introduced new test
   t/bingo_splitnumber.t instead
-  
+
 - Fixed some broken tests, they showed their ugly face when refactoring
 
 - Added POD on test coverage
 
 
-0.13 Released 5th. of March 2005 (Update not necessary)
+0.13 2005.03.13 (Update not necessary)
 
 - POD cleaned up (removing unneccesary tags)
 
@@ -87,19 +98,20 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 - Migrated from ExtUtils::MakeMaker to Module::Build
 
 
-0.12 Released 31st. of January 2004 (Update not necessary)
+0.12 2004.01.31 (Update not necessary)
 
 - According to my fellow Copenhagen Perl Monger Kim Hansen, the actual
   number of numbers in a bingo card is 15 not 12, so I have update
   G::B::Constants and fixed to test to use G::B::Constants.
 
 
-0.11 Released 25th. of January 2004 (Update only necessary for Perl 5.005_03)
+0.11 2004.01.25 (Update only necessary for Perl 5.005_03)
 
-- Fixed [cpan #5018] Patch from LTHEGLER applied to Games::Bingo::Constants.
+- Fixed [cpan #5018] Patch from LTHEGLER applied to
+  Games::Bingo::Constants.
 
 
-0.10 Released 21st. of January 2004 (Update recommended)
+0.10 2004.01.21 (Update recommended)
 
 - Added description to NAME section in G::B::Constants
 
@@ -112,7 +124,7 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
   they are shipped together (for now)
 
 
-0.09 Released 6th. of January 2004 (Update recommended)
+0.09 2004.01.06 (Update recommended)
 
 - Added Acknowledgement section to the Games::Bingo POD
 
@@ -120,7 +132,7 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 
 - Started implementing the new Games::Bingo::Card class aswell as the
   different games (1, 2 and full card).
-  
+
 - Merged Games::Bingo::Card and Games::Bingo::Print::Card obsoleting
   the latter, this also means migrating the test files related to
   Games::Bingo::Print::Card to Games::Bingo
@@ -133,17 +145,17 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 	NUMBER_OF_NUMBERS_IN_ROW == 4
 	NUMBER_OF_ROWS_IN_CARD == 3
 	NUMBER_OF_COLUMNS_IN_CARD == 9
-	NUMBER_OF_NUMBERS_IN_CARD == 
-		NUMBER_OF_NUMBERS_IN_ROW * NUMBER_OF_ROWS_IN_CARD
+	NUMBER_OF_NUMBERS_IN_CARD ==
+	NUMBER_OF_NUMBERS_IN_ROW * NUMBER_OF_ROWS_IN_CARD
 
-- Added a b/ directory containing *.t files, which demonstrate the errors
-  found in 0.08
+- Added a b/ directory containing *.t files, which demonstrate the
+  errors found in 0.08
 
 - Added b/bless.t, which is aimed at the bless bug
 
 - Added b/short.t which is aimed at the number shortage bug
 
-- Added b/sort.t which is aimed at the number sorting bug 
+- Added b/sort.t which is aimed at the number sorting bug
 
 - Renamed get_number to get_highest_number in G::B::Column
 
@@ -154,93 +166,93 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 
 - Fixed the short bug (SEE BUGS), the new _flush method also fixed this
   problem
-  
+
 - Fixed bug in card generation code, where the picked numbers was put
   in the wrong collections
-  
+
 - Fixed sort bug (SEE BUGS), now the generated card is properly sorted
 
-- Started cleaning up some of the tests, the many changes in the upcoming
-  release 0.09 have had great impact on the test suite
-  
+- Started cleaning up some of the tests, the many changes in the
+  upcoming release 0.09 have had great impact on the test suite
+
 - Removed set_status method from G::B::Column, it is no longer used
 
 - Fixed a bug in the pulled method in Games::Bingo
 
 
-0.08 Released 20th. of August 2003 (No update necessary)
+0.08 2003.08.20 (No update necessary)
 
 - Applied patch from Lars Thegler to bin/bingo.pl (SEE:
   http://rt.cpan.org/NoAuth/Bug.html?id=3271 and the BUGS file)
- 
+
 - Applied patch from Lars to Games::Bingo docs and stuff (SEE:
   http://rt.cpan.org/NoAuth/Bug.html?id=3273 and the BUGS file)
 
 - Added Acknowledgement section to the README
 
 
-0.07 Released 2nd. of August 2003 (Update necessary)
+0.07 2003.08.02 (Update necessary)
 
 - Removed t/Cover.t from distribution since it is experimental this
   should fix the breaking test (SEE:
   http://rt.cpan.org/NoAuth/Bug.html?id=3114 and the BUGS file)
 
 
-0.06 Released 30th. of July 2003 (no update necessary)
+0.06 2003.07.30 (no update necessary)
 
 - Separation of Games::Bingo::Print out from Games::Bingo. This means
   the following files have been moved out from the Games::Bingo
   distribution:
-   
+
     bin/bingo_plates.pl
     lib/Games/Bingo/Print.pm
     lib/Games/Bingo/Print/Plate.pm
    	t/Print.t
    	t/Plate.t
    	t/Plate2.t
-   
+
   And the TODO have been cleaned up (Print tasks have been moved to
   Games::Bingo::Print TODO)
- 
+
 - Removed test.pl
- 
+
 - Added t/cover.t which can be used for coverage test
- 
+
 - Added t/basic2.t holding test of pull
 
 - Added $VERSION variable to remaining modules
- 
+
 - Renamed plates to cards (proper english)
- 
+
 - Exchanged personal email address for CPAN address
- 
+
 - Additional tests of the new methods in Games::Bingo (SEE
   CHANGES, release 0.05 and t/basic2.t)
 
 
-0.05 Released 25th. of June 2003 (no update necessary)
+0.05 2003.06.25 (no update necessary)
 
-- Added t/pod.t, one more requirement, have a look at: 
+- Added t/pod.t, one more requirement, have a look at:
   http://use.perl.org/~petdance/journal/12391
-  
+
 - Updated the INSTALL guide by request with information on PDFLib
   installation
 
 - Implemented integration with Games::Bingo::Bot, introducing new
   class: Games::Bingo::Card
-  
+
 - Implemented new methods in Games::Bingo: pulled, _all_pulled and pull
 
-- Implemented internal structure in Games::Bingo to hold the taken 
+- Implemented internal structure in Games::Bingo to hold the taken
   numbers, now referred to as pulled
-  
+
 - This release is require by Games::Bingo::Bot 0.01 (just released)
 
 - Cleaned a few POD mistakes (escapes) and added some simple docs on
   the new methods
 
 
-0.04 Released 16th. of May 2003 (no update necessary)
+0.04 2003.05.16 (no update necessary)
 
 - Fixed the NAME section in Games::Bingo::Print, this should clear out
   the last bug
@@ -265,7 +277,7 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 - Included the rules of the game of bingo in the README
 
 
-0.03 Released 14th. of May 2003 (no update necessary)
+0.03 2003.05.14 (no update necessary)
 
 - Cleaned up all the POD (no warnings)
 
@@ -274,7 +286,7 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 - Added docs to the bin/* files.
 
 
-0.02 Released 11th. of May 2003 (no update necessary)
+0.02 2003.05.11, (no update necessary)
 
 - Fixed broken POD in Games::Bingo::Print
 
@@ -293,7 +305,7 @@ $Id: CHANGES 1870 2007-08-12 19:28:13Z jonasbn $
 - Added more material to SYNOPSIS sections
 
 
-0.01 Released 10th. of May 2003 
+0.01 2003,05,.10
 
 - Project setup, all the files and prototypes, lots of programming etc.
 
