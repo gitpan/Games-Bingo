@@ -1,4 +1,11 @@
-CHANGES file for Games::Bingo
+Changes file for Games::Bingo
+
+0.17 2014.08.21, maintenance release, update not required
+
+- Addressing Github issue #1. Report on failing test from CPAN testers
+  The issue is one of case sentivity on the CHANGES file (this file).
+  File attempted renamed.
+
 
 0.16 2014.08.20, maintenance release, update not required
 
